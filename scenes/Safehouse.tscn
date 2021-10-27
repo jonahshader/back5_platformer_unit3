@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Safehouse.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39.9642, 39.9374 )
+
+[node name="Safehouse" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -40.0
+margin_top = -40.0
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ButtonDelay" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = -75.0
+margin_top = -110.0
+margin_right = 75.0
+margin_bottom = -70.0
+disabled = true
+text = "NEXT LEVEL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="." to="." method="_on_Safehouse_body_entered"]
+[connection signal="timeout" from="ButtonDelay" to="." method="_on_ButtonDelay_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
