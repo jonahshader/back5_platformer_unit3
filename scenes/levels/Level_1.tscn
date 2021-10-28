@@ -30,7 +30,6 @@ __meta__ = {
 [node name="Death_Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( -3137.11, 354.463 )
 collision_layer = 2
-speed = 185
 
 [node name="GameHud" parent="." instance=ExtResource( 3 )]
 
