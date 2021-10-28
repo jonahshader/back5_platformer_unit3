@@ -25,10 +25,15 @@ func _process(delta):
 		vel.y -= jump_force
 
 
-func gameover():
-	hide()
-	pass
+func gameover(body):
+	get_node("../GameHud").disable_calculations()
+	var new_cam = Camera2D.new()
+	new_cam.offset = $Camera2D.offset
+	$Camera2D.current = false
+	new_cam.current = true
+	new_cam.position = position
+	get_parent().add_child(new_cam)
+	queue_free()
 
-func survived():
-	hide()
-	pass
+func survived(body):
+	gameover(body)
