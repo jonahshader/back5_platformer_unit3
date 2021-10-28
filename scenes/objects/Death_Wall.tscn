@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/objects/Death_Wall.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 640, 880 )
+
+[node name="Death_Wall" type="Area2D"]
+scale = Vector2( 2, 3 )
+collision_layer = 3
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 100
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = -880.0
+margin_right = 1280.0
+margin_bottom = 880.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2( 640, 0 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Death_Wall_body_entered"]

@@ -40,7 +40,7 @@ func survived():
 
 
 func _on_ContinueButton_pressed():
-	
+	pass
 
 
 func _on_RestartButton_pressed():

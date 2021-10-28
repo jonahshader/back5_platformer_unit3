@@ -11,7 +11,7 @@ func _on_ButtonDelay_timeout():
 # This will be moved to a completion screen for each level later
 # The safehouse will simply bring up the completion screen instead
 func _on_Button_pressed():
-	if ResourceLoader.exists("res://scenes/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn"):
-		get_tree().change_scene("res://scenes/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
+	if ResourceLoader.exists("res://scenes/levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn"):
+		get_tree().change_scene("res://scenes/levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 	else:
-		get_tree().change_scene("res://scenes/Main.tscn")
+		get_tree().change_scene("res://scenes/levels/Main.tscn")
