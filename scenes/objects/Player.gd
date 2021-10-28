@@ -23,9 +23,9 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		vel.y -= jump_force
+		
 
-
-func gameover(body):
+func kill():
 	get_node("../GameHud").disable_calculations()
 	var new_cam = Camera2D.new()
 	new_cam.offset = $Camera2D.offset
@@ -35,5 +35,8 @@ func gameover(body):
 	get_parent().add_child(new_cam)
 	queue_free()
 
+func gameover(body):
+	kill()
+
 func survived(body):
-	gameover(body)
+	kill()

@@ -29,6 +29,12 @@ func _process(delta):
 	calc_dist_left()
 	$DistanceLeftLabel.text = "Distance Left: " + str(int(distance_left / 50))
 	$TimeLabel.text = "Time: " + str(int(time))
+	
+	if dist_calculating:
+		if player.position.y > 3500:
+			player.kill()
+			gameover(null)
+	
 	time += delta
 	
 func gameover(body):
@@ -45,7 +51,7 @@ func _on_ContinueButton_pressed():
 	if ResourceLoader.exists("res://scenes/levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn"):
 		get_tree().change_scene("res://scenes/levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 	else:
-		get_tree().change_scene("res://scenes/levels/Level_1.tscn")
+		get_tree().change_scene("res://scenes/menus/PrototypeEnd.tscn")
 
 func _on_RestartButton_pressed():
 	get_tree().change_scene("res://scenes/levels/Level_1.tscn")
