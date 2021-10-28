@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/menus/GameHud.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Winkle-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="GameHud" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="DistanceLeftLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -495.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 1 )
+text = "Distance Remaining:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_right = 240.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 1 )
+text = "Time:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
