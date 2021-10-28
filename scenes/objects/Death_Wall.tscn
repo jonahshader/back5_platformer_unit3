@@ -6,7 +6,7 @@
 extents = Vector2( 640, 880 )
 
 [node name="Death_Wall" type="Area2D"]
-scale = Vector2( 2, 3 )
+scale = Vector2( 2, 6 )
 collision_layer = 3
 collision_mask = 2
 script = ExtResource( 1 )
