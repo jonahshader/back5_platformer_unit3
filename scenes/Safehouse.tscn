@@ -7,6 +7,9 @@ extents = Vector2( 39.9642, 39.9374 )
 
 [node name="Safehouse" type="Area2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -40.0
