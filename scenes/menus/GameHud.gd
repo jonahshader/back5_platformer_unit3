@@ -59,3 +59,7 @@ func _on_RestartButton_pressed():
 func disable_calculations():
 	dist_calculating = false
 
+
+
+func _on_Safehouse_body_entered(body):
+	pass # Replace with function body.
