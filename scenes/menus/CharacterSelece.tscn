@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/fonts/Winkle-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/Images/orc07.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/wizard_walk.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/idle_5.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/player1.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -77,18 +79,18 @@ custom_fonts/font = SubResource( 7 )
 text = "Character 3"
 
 [node name="Character1" type="Sprite" parent="VBoxContainer/HBoxContainer"]
-position = Vector2( 208.394, 350.108 )
+position = Vector2( 208.394, 351.443 )
 scale = Vector2( 0.549418, 0.838135 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="Character2" type="Sprite" parent="VBoxContainer/HBoxContainer"]
-position = Vector2( 649.4, 346.391 )
-scale = Vector2( 0.549, 0.838 )
-texture = ExtResource( 2 )
+position = Vector2( 652.069, 345.723 )
+scale = Vector2( 3.26244, 3.6115 )
+texture = ExtResource( 3 )
 
 [node name="Character3" type="Sprite" parent="VBoxContainer/HBoxContainer"]
-position = Vector2( 1091.23, 342.387 )
-scale = Vector2( 0.549, 0.838 )
+position = Vector2( 1109.25, 345.056 )
+scale = Vector2( 1.17371, 2.47105 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]

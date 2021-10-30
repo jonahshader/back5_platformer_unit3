@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/objects/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/Images/orc07.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/wizard_walk.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9.37164, 10.0083 )
@@ -19,8 +19,7 @@ offset = Vector2( 0, -60 )
 current = true
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1.66893e-06, -39.7191 )
-rotation = -3.14159
-scale = Vector2( -0.0676646, -0.138344 )
+position = Vector2( 0.707352, -41.6262 )
+rotation = 3.14159
+scale = Vector2( -0.290012, -0.647744 )
 texture = ExtResource( 2 )
-flip_h = true
