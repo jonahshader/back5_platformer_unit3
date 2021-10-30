@@ -1,10 +1,6 @@
 extends CanvasLayer
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 onready var player = get_node("../Player")
 onready var safehouse = get_node("../Safehouse")
 var dist_calculating = true
@@ -28,7 +24,8 @@ func _ready():
 func _process(delta):
 	calc_dist_left()
 	$DistanceLeftLabel.text = "Distance Left: " + str(int(distance_left / 50))
-	$TimeLabel.text = "Time: " + str(int(time))
+	if dist_calculating:
+		$TimeLabel.text = "Time: " + str(int(time))
 	
 	if dist_calculating:
 		if player.position.y > 3500:
