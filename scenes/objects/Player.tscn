@@ -4,7 +4,6 @@
 [ext_resource path="res://assets/Images/wizard_walk.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9.37164, 10.0083 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 15
@@ -20,7 +19,7 @@ offset = Vector2( 0, -60 )
 current = true
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.707352, -41.6262 )
+position = Vector2( 2.70735, -41.1262 )
 rotation = 3.14159
-scale = Vector2( -0.290012, -0.647744 )
+scale = Vector2( -0.648, -0.648 )
 texture = ExtResource( 2 )
