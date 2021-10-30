@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/objects/Safehouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/objects/Death_Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objects/EscExit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/objects/JetPack.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/objects/JetPackPickup.tscn" type="PackedScene" id=7]
 
 [node name="1" type="Node"]
 
@@ -28,8 +28,8 @@ collision_mask = 0
 
 [node name="EscExit" parent="." instance=ExtResource( 6 )]
 
-[node name="JetPack" parent="." instance=ExtResource( 7 )]
-position = Vector2( 286.74, 977.973 )
+[node name="JetPackPickup" parent="." instance=ExtResource( 7 )]
+position = Vector2( 339.041, 989.807 )
 
 [connection signal="body_entered" from="Death_Wall" to="Player" method="gameover"]
 [connection signal="body_entered" from="Death_Wall" to="GameHud" method="gameover"]

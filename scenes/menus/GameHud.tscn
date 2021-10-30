@@ -3,8 +3,8 @@
 [ext_resource path="res://scenes/menus/GameHud.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Winkle-Regular.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=3]
-size = 20
+[sub_resource type="DynamicFont" id=1]
+size = 46
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -18,7 +18,7 @@ anchor_right = 1.0
 margin_left = -412.0
 margin_right = -3.0
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Distance Remaining:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -27,7 +27,7 @@ __meta__ = {
 [node name="TimeLabel" type="Label" parent="."]
 margin_right = 240.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Time:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -42,7 +42,7 @@ margin_left = -124.5
 margin_top = -19.5
 margin_right = 124.5
 margin_bottom = 19.5
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "You Survived!"
 align = 1
 __meta__ = {
@@ -58,7 +58,7 @@ margin_left = -86.0
 margin_top = -19.5
 margin_right = 86.0
 margin_bottom = 19.5
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "You Lost!"
 align = 1
 __meta__ = {
@@ -70,7 +70,7 @@ margin_left = 564.653
 margin_top = 407.0
 margin_right = 745.653
 margin_bottom = 482.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Continue"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -81,7 +81,7 @@ margin_left = 573.49
 margin_top = 411.326
 margin_right = 710.49
 margin_bottom = 479.326
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
