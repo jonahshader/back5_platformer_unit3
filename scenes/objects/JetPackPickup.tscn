@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/Winkle-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/objects/JetPackPickup.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 17.5289, 22.4081 )
+
+[node name="JetPackPickup" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -15.0
+margin_top = -20.0
+margin_right = 15.0
+margin_bottom = 20.0
+color = Color( 0.909804, 0.913725, 0.411765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -17.0576
+margin_top = -18.311
+margin_right = 16.9424
+margin_bottom = 20.689
+custom_fonts/font = SubResource( 2 )
+text = "Jet
+Pack"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_JetPackPickup_body_entered"]
