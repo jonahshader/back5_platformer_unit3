@@ -29,7 +29,7 @@ collision_layer = 2
 [node name="EscExit" parent="." instance=ExtResource( 6 )]
 
 [node name="JetPackPickup" parent="." instance=ExtResource( 7 )]
-position = Vector2( 339.041, 989.807 )
+position = Vector2( 648.724, 984.468 )
 
 [connection signal="body_entered" from="Death_Wall" to="Player" method="gameover"]
 [connection signal="body_entered" from="Death_Wall" to="GameHud" method="gameover"]
