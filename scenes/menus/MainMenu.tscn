@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/tilemaps/TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/menus/MainMenu.gd" type="Script" id=4]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 200
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
@@ -42,7 +42,7 @@ margin_left = 350.0
 margin_top = 150.0
 margin_right = 908.0
 margin_bottom = 308.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.792157, 0.0784314, 0.0784314, 1 )
 text = "Escape!"
 align = 1
@@ -63,7 +63,7 @@ __meta__ = {
 
 [node name="TileMap" parent="." instance=ExtResource( 3 )]
 position = Vector2( 312.507, 673.465 )
-tile_data = PoolIntArray( -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1 )
+tile_data = PoolIntArray( -131070, 0, 1, -131069, 0, 2, -131068, 0, 2, -131067, 0, 2, -131066, 0, 2, -131065, 0, 3 )
 
 [node name="wizard_walk" type="Sprite" parent="."]
 position = Vector2( 770.485, 498.016 )
