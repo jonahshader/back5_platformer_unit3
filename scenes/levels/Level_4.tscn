@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/objects/JetPackPickup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tilemaps/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/Safehouse.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/Death_Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/menus/GameHud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/EscExit.tscn" type="PackedScene" id=7]
+
+[node name="4" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 51.2359, 1020.76 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 458800, 0, 8, 458804, 0, 8, 458808, 0, 8, 589870, 0, 8, 589883, 0, 8, 589887, 0, 1, 589888, 0, 2, 589889, 0, 2, 589890, 0, 2, 589891, 0, 65538, 655423, 0, 0, 655424, 0, 0, 655425, 0, 0, 655426, 0, 0, 655427, 0, 131074, 655428, 0, 65538, 720940, 0, 8, 720959, 0, 65536, 720960, 0, 65536, 720961, 0, 65536, 720962, 0, 65536, 720963, 0, 0, 720964, 0, 131074, 720965, 0, 65538, 720970, 0, 1, 720971, 0, 2, 720972, 0, 3, 786495, 0, 65536, 786496, 0, 65536, 786497, 0, 65536, 786498, 0, 65536, 786499, 0, 65536, 786500, 0, 0, 786501, 0, 131074, 786502, 0, 65538, 786507, 0, 65536, 851975, 0, 65537, 851976, 0, 2, 851977, 0, 2, 851978, 0, 2, 851979, 0, 3, 851998, 0, 1, 851999, 0, 2, 852000, 0, 2, 852001, 0, 2, 852002, 0, 2, 852003, 0, 3, 852007, 0, 8, 852010, 0, 8, 852031, 0, 65536, 852032, 0, 65536, 852033, 0, 65536, 852034, 0, 65536, 852035, 0, 65536, 852036, 0, 65536, 852037, 0, 0, 852038, 0, 131074, 852039, 0, 2, 852040, 0, 3, 852043, 0, 0, 852049, 0, 4, 852080, 0, 1, 852081, 0, 2, 852082, 0, 2, 852083, 0, 2, 852084, 0, 3, 917510, 0, 65537, 917511, 0, 131075, 917512, 0, 65536, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917579, 0, 65536, 917622, 0, 4, 983045, 0, 65537, 983046, 0, 131075, 983047, 0, 65536, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983115, 0, 0, 983140, 0, 4, 1048580, 0, 65537, 1048581, 0, 131075, 1048582, 0, 65536, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048651, 0, 65536, 1048660, 0, 4, 1048695, 0, 4, 1114112, 0, 1, 1114113, 0, 2, 1114114, 0, 2, 1114115, 0, 2, 1114116, 0, 131075, 1114117, 0, 65536, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114210, 0, 4, 1114215, 0, 4, 1114218, 0, 4, 1114228, 0, 4, 1179736, 0, 4, 1179740, 0, 4, 1179743, 0, 4, 1179758, 0, 1, 1179759, 0, 2, 1179760, 0, 2, 1179761, 0, 3 )
+
+[node name="Death_Wall" parent="." instance=ExtResource( 5 )]
+position = Vector2( -3137.11, 354.463 )
+collision_layer = 2
+speed = 130
+
+[node name="GameHud" parent="." instance=ExtResource( 6 )]
+
+[node name="Safehouse" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7342.35, 705.414 )
+collision_mask = 0
+
+[node name="EscExit" parent="." instance=ExtResource( 7 )]
+
+[node name="JetPackPickup" parent="." instance=ExtResource( 1 )]
+position = Vector2( 670.4, 800.819 )
+
+[connection signal="body_entered" from="Death_Wall" to="Player" method="gameover"]
+[connection signal="body_entered" from="Death_Wall" to="GameHud" method="gameover"]
+[connection signal="body_entered" from="Safehouse" to="Player" method="survived"]
+[connection signal="body_entered" from="Safehouse" to="GameHud" method="survived"]

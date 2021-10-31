@@ -41,11 +41,3 @@ func gameover(body):
 
 func survived(body):
 	kill()
-
-
-func _on_Safehouse_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_Death_Wall_body_entered(body):
-	pass # Replace with function body.
