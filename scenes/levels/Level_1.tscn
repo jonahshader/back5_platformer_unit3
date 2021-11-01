@@ -31,8 +31,6 @@ collision_layer = 2
 [node name="JetPackPickup" parent="." instance=ExtResource( 7 )]
 position = Vector2( 648.724, 984.468 )
 
-[connection signal="body_entered" from="Death_Wall" to="Player" method="gameover"]
-[connection signal="body_entered" from="Death_Wall" to="GameHud" method="gameover"]
 [connection signal="body_entered" from="Safehouse" to="Player" method="survived"]
 [connection signal="body_entered" from="Safehouse" to="GameHud" method="survived"]
 [connection signal="body_entered" from="Death_Wall" to="Player" method="gameover"]
