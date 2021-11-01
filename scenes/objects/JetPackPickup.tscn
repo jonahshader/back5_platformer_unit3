@@ -3,13 +3,13 @@
 [ext_resource path="res://assets/fonts/Winkle-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/objects/JetPackPickup.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 20
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 17.5289, 22.4081 )
 
 [node name="JetPackPickup" type="Area2D"]
@@ -32,7 +32,7 @@ margin_left = -17.0576
 margin_top = -18.311
 margin_right = 16.9424
 margin_bottom = 20.689
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Jet
 Pack"
 align = 1
@@ -41,6 +41,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_JetPackPickup_body_entered"]
