@@ -18,14 +18,12 @@ tile_data = PoolIntArray( 458800, 0, 8, 458804, 0, 8, 458808, 0, 8, 589870, 0, 8
 
 [node name="Death_Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( -3137.11, 354.463 )
-collision_layer = 2
 speed = 130
 
 [node name="GameHud" parent="." instance=ExtResource( 6 )]
 
 [node name="Safehouse" parent="." instance=ExtResource( 3 )]
 position = Vector2( 7342.35, 705.414 )
-collision_mask = 0
 
 [node name="EscExit" parent="." instance=ExtResource( 7 )]
 
