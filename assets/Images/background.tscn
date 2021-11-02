@@ -7,8 +7,8 @@
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 1278.0
-margin_bottom = 718.0
+margin_right = 1276.0
+margin_bottom = 716.0
 texture = ExtResource( 1 )
 stretch_mode = 1
 __meta__ = {

@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+
+
 var speed = 200
 var jump_force = 600
 var gravity = 800
@@ -9,6 +11,22 @@ var vel = Vector2()
 # this was originally on _physics_process but
 # that only ran at 60 fps so i switched to _process
 # second^-1
+
+func _ready():
+	$Sprite.queue_free()
+	
+	var sprite_1 = preload("res://scenes/objects/playersprites/PlayerSprite1.tscn")
+	var sprite_2 = preload("res://scenes/objects/playersprites/PlayerSprite2.tscn")
+	var sprite_3 = preload("res://scenes/objects/playersprites/PlayerSprite3.tscn")
+	
+	match PlayerData.player_sprite_number:
+		1:
+			add_child(sprite_1.instance())
+		2:
+			add_child(sprite_2.instance())
+		3:
+			add_child(sprite_3.instance())
+
 func _process(delta):
 	vel.x = 0
 	if Input.is_action_pressed("move_left"):
