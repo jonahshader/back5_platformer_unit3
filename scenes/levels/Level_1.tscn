@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilemaps/TileMap.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/objects/Safehouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/objects/Death_Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objects/EscExit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/enemy_jumper.tscn" type="PackedScene" id=7]
 
 [node name="1" type="Node"]
 
@@ -26,6 +27,9 @@ collision_layer = 2
 [node name="GameHud" parent="." instance=ExtResource( 3 )]
 
 [node name="EscExit" parent="." instance=ExtResource( 6 )]
+
+[node name="enemy" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168.077, 800 )
 
 [connection signal="body_entered" from="Safehouse" to="Player" method="survived"]
 [connection signal="body_entered" from="Safehouse" to="GameHud" method="survived"]
