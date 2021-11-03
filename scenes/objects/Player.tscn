@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/objects/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Images/wizard_walk.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/1.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,3 +24,10 @@ position = Vector2( 2.70735, -41.1262 )
 rotation = 3.14159
 scale = Vector2( -0.648, -0.648 )
 texture = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="1" type="Sprite" parent="ParallaxBackground"]
+scale = Vector2( 1.50004, 1.49965 )
+texture = ExtResource( 3 )
+centered = false
