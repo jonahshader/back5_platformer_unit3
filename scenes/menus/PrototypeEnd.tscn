@@ -21,7 +21,7 @@ margin_top = -19.5
 margin_right = 162.0
 margin_bottom = 19.5
 custom_fonts/font = SubResource( 1 )
-text = "End of prototype"
+text = "You won! :D Good Job"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
