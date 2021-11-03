@@ -19,7 +19,7 @@ tile_data = PoolIntArray( 458841, 0, 8, 458844, 0, 4, 458859, 0, 4, 524360, 0, 1
 position = Vector2( 7342.35, 705.414 )
 
 [node name="Death_Wall" parent="." instance=ExtResource( 5 )]
-position = Vector2( -3137.11, 354.463 )
+position = Vector2( -1227.01, 954.128 )
 
 [node name="GameHud" parent="." instance=ExtResource( 3 )]
 

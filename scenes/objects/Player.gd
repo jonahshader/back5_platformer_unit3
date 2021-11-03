@@ -46,6 +46,7 @@ func _process(delta):
 
 func kill():
 	get_node("../GameHud").disable_calculations()
+	get_node("../Death_Wall").disable_calculations()
 	var new_cam = Camera2D.new()
 	new_cam.offset = $Camera2D.offset
 	$Camera2D.current = false
