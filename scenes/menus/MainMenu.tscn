@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/Winkle-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Images/wizard_walk.png" type="Texture" id=2]
 [ext_resource path="res://assets/tilemaps/TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/menus/MainMenu.gd" type="Script" id=4]
+[ext_resource path="res://assets/Images/background.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 200
@@ -73,5 +74,7 @@ texture = ExtResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wizard_walk"]
 autoplay = "move"
 anims/move = SubResource( 3 )
+
+[node name="background" parent="." instance=ExtResource( 5 )]
 
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
