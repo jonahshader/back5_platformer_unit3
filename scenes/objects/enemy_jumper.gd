@@ -22,7 +22,9 @@ func _physics_process(_delta):
 	jump_timer -= 1
 	if (jump_timer == 0):
 			vel.y -= jump_force
-	
+func on_Area2D_body_entered(body):
+		if body.is_in_group("../Player"):
+			body.gameover()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
