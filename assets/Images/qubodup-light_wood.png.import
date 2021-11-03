@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/qubodup-light_wood.png-7a13ee080f53d8d941c9e5fe02f6b30e.stex"
+path="res://.import/qubodup-light_wood.png-e36e81b61258d57f8d893700a3ab61e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/other/qubodup-light_wood.png"
-dest_files=[ "res://.import/qubodup-light_wood.png-7a13ee080f53d8d941c9e5fe02f6b30e.stex" ]
+source_file="res://assets/Images/qubodup-light_wood.png"
+dest_files=[ "res://.import/qubodup-light_wood.png-e36e81b61258d57f8d893700a3ab61e1.stex" ]
 
 [params]
 

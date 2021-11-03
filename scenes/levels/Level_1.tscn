@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/objects/Safehouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/objects/Death_Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objects/EscExit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/objects/enemy_jumper.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Images/background.tscn" type="PackedScene" id=7]
 
 [node name="1" type="Node"]
 
@@ -18,18 +18,15 @@ tile_data = PoolIntArray( 458841, 0, 8, 458844, 0, 4, 458859, 0, 4, 524360, 0, 1
 
 [node name="Safehouse" parent="." instance=ExtResource( 4 )]
 position = Vector2( 7342.35, 705.414 )
-collision_mask = 0
 
 [node name="Death_Wall" parent="." instance=ExtResource( 5 )]
-position = Vector2( -3137.11, 354.463 )
-collision_layer = 2
+position = Vector2( -1227.01, 954.128 )
 
 [node name="GameHud" parent="." instance=ExtResource( 3 )]
 
 [node name="EscExit" parent="." instance=ExtResource( 6 )]
 
-[node name="enemy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 168.077, 800 )
+[node name="background" parent="." instance=ExtResource( 7 )]
 
 [connection signal="body_entered" from="Safehouse" to="Player" method="survived"]
 [connection signal="body_entered" from="Safehouse" to="GameHud" method="survived"]
