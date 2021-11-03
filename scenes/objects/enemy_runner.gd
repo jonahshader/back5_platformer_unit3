@@ -1,37 +1,35 @@
 extends KinematicBody2D
 onready var floor_detector = $OnGround
-var jump_force = 600
+onready var floor_left = $GroundToLeft
+onready var floor_right = $GroundToRight
 var gravity = 800
-var jump_delay = 15
-var jump_timer = jump_delay
+var walk_speed = 800
 var vel = Vector2()
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	pass # Replace with function body.
+	vel.x = walk_speed
+	 # Replace with function body.
 
 func _physics_process(_delta):
 	vel = move_and_slide(vel, Vector2.UP)
 	if not floor_detector.is_colliding():
-		vel.y += gravity * _delta
-		jump_timer = jump_delay
-	jump_timer -= 1
-	if (jump_timer == 0):
-			vel.y -= jump_force
-
+		vel.y += vel.y * _delta
+	if not floor_left.is_colliding():
+		vel.x = -(walk_speed)
+	if not floor_right.is_colliding():
+		vel.x = walk_speed
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
 func _on_Area2D_body_entered(body):
 	if (get_node("../Player").vel.y > 0):
 		queue_free()
 	else:
 		get_node("../GameHud").gameover(null)
 		get_node("../Player").gameover(null)
-		 # Replace with function body.
+#func _process(delta):
+#	pass
