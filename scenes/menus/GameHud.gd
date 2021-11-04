@@ -14,10 +14,12 @@ func calc_dist_left():
 #		return
 	
 func _ready():
+	$TimeLabel.hide() # don't need this currently
 	$ContinueButton.hide()
 	$RestartButton.hide()
 	$WinLabel.hide()
 	$LoseLabel.hide()
+	$LevelLabel.text = "Level " + get_tree().current_scene.name
 	calc_dist_left()
 	Music.start_music()
 
