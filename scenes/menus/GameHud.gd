@@ -19,6 +19,7 @@ func _ready():
 	$WinLabel.hide()
 	$LoseLabel.hide()
 	calc_dist_left()
+	Music.start_music()
 
 
 func _process(delta):
@@ -35,11 +36,13 @@ func _process(delta):
 	time += delta
 	
 func gameover(body):
+	Music.gameover_or_survived()
 	$LoseLabel.show()
 	yield(get_tree().create_timer(1.5), "timeout")
 	$RestartButton.show()
 
 func survived(body):
+	Music.gameover_or_survived()
 	$WinLabel.show()
 	yield(get_tree().create_timer(1.5), "timeout")
 	$ContinueButton.show()

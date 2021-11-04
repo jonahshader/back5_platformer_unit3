@@ -2,15 +2,18 @@
 
 [ext_resource path="res://assets/Images/1.png" type="Texture" id=1]
 
-[node name="background" type="Node2D"]
+[node name="background" type="ParallaxBackground"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 1276.0
-margin_bottom = 716.0
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+margin_left = -14953.0
+margin_top = -14361.0
+margin_right = 56976.0
+margin_bottom = 33308.0
 texture = ExtResource( 1 )
-stretch_mode = 1
+stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
