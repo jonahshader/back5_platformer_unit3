@@ -10,7 +10,7 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "Splash2"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -25,14 +25,13 @@ tracks/0/keys = {
 "values": [ Vector2( 478, 1000 ), Vector2( 478, 340 ) ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 175
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "Splash"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
 tracks/0/interp = 1
@@ -66,7 +65,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
 autoplay = "Splash2"
-anims/Splash2 = SubResource( 4 )
+anims/Splash2 = SubResource( 2 )
 
 [node name="EscExit" parent="." instance=ExtResource( 2 )]
 
@@ -75,7 +74,7 @@ margin_left = 290.0
 margin_top = -400.0
 margin_right = 1024.0
 margin_bottom = -261.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.780392, 0.0980392, 0.0980392, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.752941, 0.72549, 0.72549, 1 )
@@ -86,6 +85,6 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label2"]
 autoplay = "Splash"
-anims/Splash = SubResource( 3 )
+anims/Splash = SubResource( 4 )
 
 [node name="background" parent="." instance=ExtResource( 3 )]
