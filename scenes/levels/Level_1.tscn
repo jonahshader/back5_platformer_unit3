@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilemaps/TileMap.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/objects/EscExit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Images/background.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/objects/enemy_jumper.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/objects/enemy_runner.tscn" type="PackedScene" id=9]
 
 [node name="1" type="Node"]
 
@@ -33,6 +34,9 @@ position = Vector2( -1227.01, 954.128 )
 
 [node name="enemy" parent="." instance=ExtResource( 8 )]
 position = Vector2( 300, 900 )
+
+[node name="enemy2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 565.723, 1007.99 )
 
 [connection signal="body_entered" from="Safehouse" to="Player" method="survived"]
 [connection signal="body_entered" from="Safehouse" to="GameHud" method="survived"]
