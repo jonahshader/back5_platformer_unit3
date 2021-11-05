@@ -331,7 +331,7 @@ position = Vector2( 7280.29, -20.1975 )
 
 [node name="Death_Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( -1212.15, 592.635 )
-speed = 190
+speed = 188
 
 [node name="GameHud" parent="." instance=ExtResource( 3 )]
 
