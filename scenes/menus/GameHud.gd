@@ -56,7 +56,7 @@ func _on_ContinueButton_pressed():
 		get_tree().change_scene("res://scenes/menus/PrototypeEnd.tscn")
 
 func _on_RestartButton_pressed():
-	get_tree().change_scene("res://scenes/levels/Level_1.tscn")
+	get_tree().reload_current_scene()
 	
 func disable_calculations():
 	dist_calculating = false
