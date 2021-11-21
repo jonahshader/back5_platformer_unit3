@@ -10,7 +10,7 @@ onready var THRUST = player.gravity * THRUST_RATIO
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var thrusting = false
-	if Input.is_action_just_pressed("jump") and player.is_on_floor():
+	if Input.is_action_pressed("jump") and player.is_on_floor():
 		player.vel.y += player.jump_force/2 # counter act some of the jumping force
 	if Input.is_action_pressed("jump"):
 		if fuel_level > 0:
