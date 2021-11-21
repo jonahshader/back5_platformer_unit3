@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 
 
-var speed = 200
-var jump_force = 600
-var gravity = 800
+var speed = 220
+var jump_force = 700
+var gravity = 1200
 
 var vel = Vector2()
 
