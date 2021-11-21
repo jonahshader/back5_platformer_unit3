@@ -5,7 +5,7 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-const SPRING_VEL = 600 * sqrt(2)
+const SPRING_VEL = 700 * sqrt(2)
 const SPRING_ACTIVATE_HEIGHT = 40
 const RETRACT_SPEED = 60
 var spring_height_offset = 0.0
