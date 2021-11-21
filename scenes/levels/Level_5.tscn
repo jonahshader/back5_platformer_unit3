@@ -11,7 +11,7 @@
 [ext_resource path="res://scenes/objects/Spring.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/objects/enemy_jumper.tscn" type="PackedScene" id=10]
 
-[node name="5" type="Node"]
+[node name="5" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 77.0994, 992.027 )
