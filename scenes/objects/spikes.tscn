@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/objects/spikes.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14.3992, 13.7584 )
+extents = Vector2( 12.6105, 9.38263 )
 
 [node name="SpikeTrap" type="Area2D"]
 collision_layer = 8
