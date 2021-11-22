@@ -15,7 +15,7 @@ scale = Vector2( 2, 4 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2( 0, -60 )
+offset = Vector2( 0, -20 )
 current = true
 
 [node name="Sprite" type="Sprite" parent="."]

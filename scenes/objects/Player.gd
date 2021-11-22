@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 
 
-var speed = 200
-var jump_force = 600
-var gravity = 800
+var speed = 220
+var jump_force = 700
+var gravity = 1200
 
 var vel = Vector2()
 
@@ -40,7 +40,7 @@ func _process(delta):
 	
 	
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y -= jump_force
 		
 

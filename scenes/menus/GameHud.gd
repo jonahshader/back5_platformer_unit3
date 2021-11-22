@@ -14,11 +14,14 @@ func calc_dist_left():
 #		return
 	
 func _ready():
+	$TimeLabel.hide() # don't need this currently
 	$ContinueButton.hide()
 	$RestartButton.hide()
 	$WinLabel.hide()
 	$LoseLabel.hide()
+	$LevelLabel.text = "Level " + get_tree().current_scene.name
 	calc_dist_left()
+	Music.start_music()
 
 
 func _process(delta):
@@ -35,11 +38,13 @@ func _process(delta):
 	time += delta
 	
 func gameover(body):
+	Music.gameover_or_survived()
 	$LoseLabel.show()
 	yield(get_tree().create_timer(1.5), "timeout")
 	$RestartButton.show()
 
 func survived(body):
+	Music.gameover_or_survived()
 	$WinLabel.show()
 	yield(get_tree().create_timer(1.5), "timeout")
 	$ContinueButton.show()
@@ -51,7 +56,7 @@ func _on_ContinueButton_pressed():
 		get_tree().change_scene("res://scenes/menus/PrototypeEnd.tscn")
 
 func _on_RestartButton_pressed():
-	get_tree().change_scene("res://scenes/levels/Level_1.tscn")
+	get_tree().reload_current_scene()
 	
 func disable_calculations():
 	dist_calculating = false
