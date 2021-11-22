@@ -1,6 +1,6 @@
 extends KinematicBody2D
 onready var floor_detector = $OnGround
-var jump_force = 600
+var jump_force = 400
 var gravity = 800
 var jump_delay = 15
 var jump_timer = jump_delay
@@ -29,7 +29,7 @@ func _physics_process(_delta):
 
 
 func _on_Area2D_body_entered(body):
-	if (get_node("../Player").vel.y > 0):
+	if ((get_node("../Player").vel.y > 0) || (get_node("../Player").position.y < self.position.y - 16)):
 		queue_free()
 	else:
 		get_node("../GameHud").gameover(null)
