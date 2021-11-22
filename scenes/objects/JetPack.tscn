@@ -38,6 +38,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="FuelBar" type="ColorRect" parent="."]
+margin_left = -20.2759
+margin_top = -44.1203
+margin_right = -15.2759
+margin_bottom = -4.00029
+rect_pivot_offset = Vector2( 0, 40.084 )
+color = Color( 0.156863, 0.92549, 0.0470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="."]
 margin_left = -16.7041
 margin_top = -42.5294
