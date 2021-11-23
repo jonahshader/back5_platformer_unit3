@@ -36,86 +36,85 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 1.0
-margin_right = 1278.0
-margin_bottom = 718.0
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Character1" type="Sprite" parent="VBoxContainer"]
-position = Vector2( 208.394, 508.443 )
-scale = Vector2( 0.838, 0.838 )
-texture = ExtResource( 4 )
-
-[node name="Character2" type="Sprite" parent="VBoxContainer"]
-position = Vector2( 652.069, 502.723 )
-scale = Vector2( 3.612, 3.612 )
-texture = ExtResource( 3 )
-
-[node name="Character3" type="Sprite" parent="VBoxContainer"]
-position = Vector2( 1109.25, 502.056 )
-scale = Vector2( 2.471, 2.471 )
-texture = ExtResource( 2 )
-
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-margin_left = 146.834
-margin_top = 248.719
-margin_right = 234.834
-margin_bottom = 288.719
+margin_left = 75.834
+margin_top = 224.719
+margin_right = 325.834
+margin_bottom = 624.719
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Char_1_Btn" type="Button" parent="VBoxContainer2"]
-margin_right = 88.0
-margin_bottom = 20.0
+margin_right = 250.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 250, 400 )
 custom_fonts/font = SubResource( 2 )
-text = "Character 1"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": "Buttn for player 1"
 }
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
-margin_left = 619.404
-margin_top = 254.712
-margin_right = 710.404
-margin_bottom = 294.712
+margin_left = 522.404
+margin_top = 221.712
+margin_right = 772.404
+margin_bottom = 621.712
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Char_2_Btn" type="Button" parent="VBoxContainer3"]
-margin_right = 91.0
-margin_bottom = 20.0
+margin_right = 250.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 250, 400 )
 custom_fonts/font = SubResource( 3 )
-text = "Character 2"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": "Button for player 2"
 }
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="."]
-margin_left = 1060.51
-margin_top = 257.709
-margin_right = 1150.51
-margin_bottom = 297.709
+margin_left = 969.51
+margin_top = 214.709
+margin_right = 1219.51
+margin_bottom = 614.709
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Char_3_Btn" type="Button" parent="VBoxContainer4"]
-margin_right = 90.0
-margin_bottom = 20.0
+margin_right = 250.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 250, 400 )
 custom_fonts/font = SubResource( 4 )
-text = "Character 3"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": "Button for player 3"
 }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 1.0
+margin_right = 91.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Character1" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 200.394, 430.443 )
+scale = Vector2( 0.838, 0.838 )
+texture = ExtResource( 4 )
+
+[node name="Character2" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 644.069, 424.723 )
+scale = Vector2( 3.612, 3.612 )
+texture = ExtResource( 3 )
+
+[node name="Character3" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 1101.25, 424.056 )
+scale = Vector2( 2.471, 2.471 )
+texture = ExtResource( 2 )
 
 [connection signal="button_down" from="VBoxContainer2/Char_1_Btn" to="." method="_on_Char_1_Btn_button_down"]
 [connection signal="button_down" from="VBoxContainer3/Char_2_Btn" to="." method="_on_Char_2_Btn_button_down"]
